@@ -10,6 +10,7 @@
 ## Domain
 
 <!-- What domain did you choose? Why is this knowledge valuable and hard to find through official channels? -->
+This is an unofficial student review guide for computer science professors at New York University. The guide is helpful because it offers honest opinions on each professor's teaching style based on real student experiences, rather than just their credentials or qualifications. 
 
 ---
 
@@ -20,7 +21,7 @@
 
 | # | Source | Description | URL or location |
 |---|--------|-------------|-----------------|
-| 1 | | | |
+| 1 | Alon Hillel-Tuch | | Alon Hillel-Tuch |
 | 2 | | | |
 | 3 | | | |
 | 4 | | | |
