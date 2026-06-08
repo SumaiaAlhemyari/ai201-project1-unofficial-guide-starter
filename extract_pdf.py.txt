@@ -1,0 +1,27 @@
+import os
+import pdfplumber
+
+# 1. Set the path to your Windows folder containing the PDFs
+folder_path = r"C:\Users\Sumaia\Downloads\ai201-project1-unofficial-guide-starter\documents"
+
+# 2. Loop through every file inside that folder
+for filename in os.listdir(folder_path):
+    
+    # 3. Process only PDF files
+    if filename.lower().endswith(".pdf"):
+        full_pdf_path = os.path.join(folder_path, filename)
+        print(f"Extracting text from: {filename}")
+        
+        # 4. Open the PDF and extract all text
+        with pdfplumber.open(full_pdf_path) as pdf:
+            text = "\n\n".join(p.extract_text() for p in pdf.pages if p.extract_text())
+        
+        # 5. Create a new TXT filename by replacing '.pdf' with '.txt'
+        txt_filename = filename[:-4] + ".txt"
+        full_txt_path = os.path.join(folder_path, txt_filename)
+        
+        # 6. Save the text into the new TXT file
+        # 'utf-8' encoding ensures symbols and accents save correctly
+        with open(full_txt_path, "w", encoding="utf-8") as txt_file:
+            txt_file.write(text)
+            
